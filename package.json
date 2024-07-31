@@ -2,12 +2,12 @@
   "name": "resume",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://zztkdfo.github.io/",
+  "homepage": "https://Kijuny.github.io/",
   "scripts": {
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
-    "build": "next build && next export",
+    "build": "next build",
     "serve": "npx http-server out"
   },
   "dependencies": {
