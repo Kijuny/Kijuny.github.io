@@ -6,7 +6,7 @@ const data = {
     "name": "방기준",
     "job": "문제를 해결하는 백엔드 개발자",
     "email": "gkjpang@gmail.com",
-    "image": "profile_image.jpeg",
+    "image": "profile_image_s.jpeg",
     "github": "https://github.com/Kijuny",
     "blog": "",
     "website": "https://kijuny.github.io",
