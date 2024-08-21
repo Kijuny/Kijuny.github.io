@@ -617,11 +617,11 @@ export default function Home() {
                           <div className="w-full sm:w-4/5 text-left">
                             {Object.entries(skillCategory).map(([type, skillSet], idx) => (
                                 type !== "title" && (
-                                    <div className="mb-2">
+                                    <div key={idx} className="mb-2">
                                       <div className="font-semibold"> • {skillSet.title}</div>
                                       <div className="flex gap-2 flex-wrap">
-                                        {skillSet.skills.map((skill, idx) => (
-                                            <div key={idx} className="skills">
+                                        {skillSet.skills.map((skill, s_idx) => (
+                                            <div key={s_idx} className="skills">
                                               {skill}
                                             </div>
                                         ))}
@@ -640,125 +640,4 @@ export default function Home() {
       </main>
   );
 }
-
-// export default function Home() {
-//   return (
-//       <main className="flex min-h-screen flex-col items-center justify-between px-4 md:px-8 lg:px-16">
-//         <div className="w-full max-w-5xl min-w-[320px] bg-white p-4">
-//           {/* Header Area */}
-//           <div className="mt-12 flex justify-between items-center">
-//             <div className="text-2xl sm:text-3xl font-bold">
-//               <div>{data.info.name}</div>
-//               <div className="text-sm sm:text-base italic text-[#c3c3c3]">
-//                 {data.info.job}
-//               </div>
-//             </div>
-//             <div className="">
-//               <div className="gap-4 flex justify-end ">
-//                 {data.info.github && (
-//                     <div className="text-2xl sm:text-3xl cursor-pointer">
-//                       <Link href={data.info.github} target="_blank">
-//                         <BsGithub />
-//                       </Link>
-//                     </div>
-//                 )}
-//                 {data.info.blog && (
-//                     <div className="text-2xl sm:text-3xl cursor-pointer">
-//                       <Link href={data.info.blog} target="_blank">
-//                         <BsJournalText />
-//                       </Link>
-//                     </div>
-//                 )}
-//                 {data.info.website && (
-//                     <div className="text-2xl sm:text-3xl cursor-pointer">
-//                       <Link href={data.info.website} target="_blank">
-//                         <BsGlobe2 />
-//                       </Link>
-//                     </div>
-//                 )}
-//               </div>
-//               <div className="mt-2">
-//                 Email:&nbsp;
-//                 <span className="text-sm sm:text-base font-bold">
-//                 {data.info.email}
-//                 </span>
-//               </div>
-//             </div>
-//           </div>
-//           {/* About Me Area */}
-//           <div className="mt-8 sm:mt-20">
-//             <div className="text-3xl sm:text-4xl mb-2">Introduce.</div>
-//             <div className="w-full border border-t border-solid" />
-//             <div className="text-base">
-//               <div className="mt-4 gap-4 flex items-center">
-//                   <div className="hidden sm:block rounded-3xl overflow-hidden min-w-24 max-w-32">
-//                     <img className="w-full h-full object-cover" src={data.info.image} alt={data.info.name} />
-//                   </div>
-//                   <div>
-//                     <p className="mt-4" dangerouslySetInnerHTML={{ __html: data.aboutMe.zone1 }} />
-//                   </div>
-//               </div>
-//               <div className="mt-8">
-//                 <p className="mt-4" dangerouslySetInnerHTML={{ __html: data.aboutMe.zone2 }} />
-//               </div>
-//             </div>
-//           </div>
-//           {/* Experience Area */}
-//           <div className="mt-8 sm:mt-20">
-//             <div className="text-3xl sm:text-4xl mb-2">Experience.</div>
-//             <div className="w-full border border-t border-solid" />
-//             <div className="text-base">
-//               {data.experience.map((exp, index) => (
-//                   <div
-//                       key={index}
-//                       className="mt-4 sm:mt-8 gap-4 flex flex-col sm:flex-row sm:gap-12"
-//                   >
-//                     <div className="w-full sm:w-1/3 text-left">
-//                       <div className="text-lg">{exp.period}</div>
-//                       <div className="flex gap-1 pl-2 mt-1 flex-wrap">
-//                         {exp.roles.map((role, idx) => (
-//                           <span key={idx} className="xs-badge">
-//                             {role}
-//                           </span>
-//                         ))}
-//                       </div>
-//                     </div>
-//                     <div className="w-full sm:w-2/3 text-left">
-//                       <div className="text-2xl">{exp.company}</div>
-//                       <div className="mt-2">{exp.description}</div>
-//                       <ul className="mt-2 list-disc pl-5">
-//                         {exp.achievements.map((ach, idx) => (
-//                             <li key={idx}>{
-//                               (typeof ach === 'string') ? ach : (
-//                                   <div>
-//                                     <span>{ach.title}</span>
-//                                     <ul>
-//                                       {ach.descriptions.map((sub, i) => (
-//                                           <li key={(idx + '_' + i)}>{sub}</li>
-//                                       ))}
-//                                     </ul>
-//                                   </div>
-//                               )
-//                             }</li>
-//                         ))}
-//                       </ul>
-//                       <div className="font-semibold mt-2"> • Skill Keywords</div>
-//                       <div className="flex gap-2 flex-wrap">
-//                         {exp.technologies.map((skill, idx) => (
-//                             <div key={idx} className="skills">
-//                               {skill}
-//                             </div>
-//                         ))}
-//                       </div>
-//                     </div>
-//                   </div>
-//               ))}
-//             </div>
-//           </div>
-//
-//           {/* 아래 섹션들도 같은 방식으로 작성 */}
-//         </div>
-//       </main>
-//   );
-// }
 
