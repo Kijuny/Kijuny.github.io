@@ -2,12 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+  --radius: 0.5rem;
+}
+
 @layer utilities {
   .emphasis {
     @apply font-bold italic;
   }
 
+  /*.xs-badge {*/
+  /*  @apply text-xs bg-gray-200 rounded-lg pl-2 pr-2 text-gray-700;*/
+  /*}*/
+
   .xs-badge {
-    @apply text-xs bg-gray-200 rounded-lg pl-2 pr-2 text-gray-700;
+    @apply text-xs bg-gray-200 rounded-lg text-gray-700;
+    --tw-bg-opacity: 1;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    --tw-text-opacity: 1;
   }
+
+  .skills {
+    margin-top: 0.25rem;
+    border-radius: calc(var(--radius) - 2px);
+    background-color: rgb(0 0 0/var(--tw-bg-opacity));
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: rgb(255 255 255/var(--tw-text-opacity));
+    --tw-bg-opacity: 1;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    --tw-text-opacity: 1;
+  }
+
 }
