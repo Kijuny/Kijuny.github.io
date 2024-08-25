@@ -174,7 +174,7 @@ const data = {
     {
       "name": "레거시 ITSM 개발 및 운영",
       "description": "엔씨소프트 사 내부용 ITSM 구축",
-      "period": "2012.02 ~ 2017.01 [5년]",
+      "period": "2011.02 ~ 2017.01 [6년]",
       "roles": ["프로젝트 리더", "설계", "풀스택", "운영"],
       "technologies": ["MS-SQL", "ASP.NET"],
       "achievements": [
@@ -186,7 +186,7 @@ const data = {
     {
       "name": "웹 서비스 배포 포탈, 정보 보안 포탈, ACL 통합 관리 등",
       "description": "엔씨소프트 사 내부용 다수 서비스 구축",
-      "period": "2012.02 ~ 2017.01 [5년]",
+      "period": "2011.02 ~ 2017.01 [6년]",
       "roles": ["프로젝트 리더", "설계", "풀스택", "운영"],
       "technologies": ["MS-SQL", "ASP.NET"],
       "achievements": [
@@ -196,7 +196,7 @@ const data = {
     {
       "name": "그 이전",
       "description": "ASP 기반 다수 웹 서비스 개발",
-      "period": "2006.01 ~ 2012.01 [6년]",
+      "period": "2006.01 ~ 2011.01 [5년]",
       "roles": ["Full-Stack 개발자"],
       "technologies": ["ASP", "ASP.NET"],
       "achievements": []
